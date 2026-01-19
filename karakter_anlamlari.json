@@ -1,0 +1,120 @@
+{
+  "blok": {
+    "karakterler": ["#", "■", "□", "▢", "▣", "▤", "▥", "▦", "▧", "▨", "▩"],
+    "ozellik": "Blok",
+    "aciklama": "Oyuncunun geçemeyeceği sabit bloklar"
+  },
+  
+  "su": {
+    "karakterler": ["~"],
+    "ozellik": "Su",
+    "aciklama": "Mavimsi su - Oyuncu geçebilir ama yavaşlar",
+    "renk": "mavi"
+  },
+  
+  "lav": {
+    "karakterler": ["~"],
+    "ozellik": "Lav",
+    "aciklama": "Kırmızımsı lav - Oyuncuya zarar verir",
+    "renk": "kırmızı"
+  },
+  
+  "asit": {
+    "karakterler": ["~"],
+    "ozellik": "Asit",
+    "aciklama": "Yeşilimsi asit - Oyuncuya zarar verir",
+    "renk": "yeşil"
+  },
+  
+  "diken": {
+    "karakterler": ["<", ">", "∆", "▲", "△", "∧", "∨", "▷", "▽", "◁", "▼", "◄", "►"],
+    "ozellik": "Diken",
+    "aciklama": "Oyuncuya zarar veren dikenli nesneler"
+  },
+  
+  "itilebilir": {
+    "karakterler": [
+      "🟥", "🟧", "🟨", "🟩", "🟦", "🟪", "🟫", 
+      "⬛", "⬜", "🔴", "🟠", "🟡", "🟢", "🔵", 
+      "🟣", "🟤", "⚫", "⚪", "🔘", "🔳", "◼️", 
+      "◾", "▪️", "🔲", "◻️", "◽", "▫️", "🔶", 
+      "🔸", "🔷", "🔹", "🟣", "🟡"
+    ],
+    "ozellik": "İtilebilir",
+    "aciklama": "Oyuncu tarafından itilebilen nesneler",
+    "yon": "her_yon"
+  },
+  
+  "yonlu_itilebilir": {
+    "karakterler": {
+      "⬆️": "yukari",
+      "➡️": "sag",
+      "⬇️": "asagi",
+      "⬅️": "sol",
+      "↕️": "dikey",
+      "↔️": "yatay"
+    },
+    "ozellik": "Yönlü İtilebilir",
+    "aciklama": "Sadece belirli yönlerde itilebilen nesneler"
+  },
+  
+  "oyuncu": {
+    "karakterler": ["P", "p"],
+    "ozellik": "Oyuncu",
+    "aciklama": "Oyun karakteri - Oyuncuyu temsil eder"
+  },
+  
+  "bos": {
+    "karakterler": [" ", ".", "-"],
+    "ozellik": "Boş",
+    "aciklama": "Oyuncunun geçebileceği boş alan"
+  },
+  
+  "hedef": {
+    "karakterler": ["O", "o", "⭐", "✨"],
+    "ozellik": "Hedef",
+    "aciklama": "Oyuncunun ulaşması gereken hedef nokta"
+  },
+  
+  "anahtar": {
+    "karakterler": ["🔑", "K", "k"],
+    "ozellik": "Anahtar",
+    "aciklama": "Kapıları açmak için kullanılan anahtar"
+  },
+  
+  "kapi": {
+    "karakterler": ["🚪", "D", "d"],
+    "ozellik": "Kapı",
+    "aciklama": "Anahtar ile açılabilen kapı"
+  },
+  
+  "duvar": {
+    "karakterler": ["|", "─", "═", "║", "╔", "╗", "╚", "╝"],
+    "ozellik": "Duvar",
+    "aciklama": "Oyuncunun geçemeyeceği duvar"
+  },
+  
+  "zemin": {
+    "karakterler": ["_", "·"],
+    "ozellik": "Zemin",
+    "aciklama": "Normal zemin yüzeyi"
+  },
+  
+  "tuzak": {
+    "karakterler": ["⚠️", "💀", "☠️", "X", "x"],
+    "ozellik": "Tuzak",
+    "aciklama": "Oyuncuya zarar veren tuzak"
+  },
+  
+  "kutu": {
+    "karakterler": ["📦", "■", "□"],
+    "ozellik": "Kutu",
+    "aciklama": "İtilebilen kutu"
+  },
+  
+  "enerji": {
+    "karakterler": ["⚡", "💎", "💠"],
+    "ozellik": "Enerji",
+    "aciklama": "Oyuncuya enerji/score veren nesne"
+  }
+}
