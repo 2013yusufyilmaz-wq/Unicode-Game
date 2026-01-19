@@ -1,73 +1,126 @@
-# 🎮 Unicode Game Lab
+🎮 Unicode Game Lab
 
-Karakter tabanlı terminal oyun motoru - Python ve JSON ile geliştirildi.
+Unicode Game V0.1.1 Beta
 
-## 📋 Özellikler
+Python ve JSON ile geliştirilmiş, Unicode karakterler üzerinden çalışan modüler bir terminal oyun motoru.
 
-- ✅ Çeşitli karakter anlamları (Blok, Diken, İtilebilir, Oyuncu, vb.)
-- ✅ JSON tabanlı karakter yönetimi
-- ✅ Terminal tabanlı oynanabilir oyun motoru
-- ✅ İtilebilir nesneler ile oynanış
-- ✅ 6 farklı örnek harita
-- ✅ Cross-platform (Windows, macOS, Linux)
+✨ Genel Bakış
 
-## 🚀 Kurulum
+Unicode Game Lab;
+karakterleri (Unicode / ASCII) oyun nesnesi olarak kullanan, tamamen özelleştirilebilir, hafif ve öğrenmesi kolay bir oyun motorudur.
 
-Python 3.7 veya üzeri gereklidir.
+Terminal tabanlıdır
 
-```bash
-# Klasöre git
-cd "Unicode Game lab"
+JSON ile genişletilebilir
 
-# Oyunu başlat
+Katmanlı ve modüler yapıya uygundur
+
+🚀 Özellikler
+
+✅ Unicode & ASCII karakter tabanlı oyun sistemi
+
+✅ JSON tabanlı karakter tanımları
+
+✅ İtilebilir nesneler (yönlü / yönsüz)
+
+✅ Diken, blok, su, hedef gibi çevresel öğeler
+
+✅ Çoklu örnek harita sistemi
+
+✅ Kolayca genişletilebilir mimari
+
+✅ Cross-platform (Windows / Linux / macOS)
+
+🧩 Oyun Mekanikleri
+
+Oyuncu (P) harita üzerinde hareket eder
+
+İtilebilir nesneler yol açmak için kullanılır
+
+Dikenler ve bloklar engeldir
+
+Hedefe (O) ulaşınca bölüm tamamlanır
+
+Tüm davranışlar JSON üzerinden kontrol edilir
+
+⌨️ Kontroller
+Tuş	İşlev
+W / ↑	Yukarı
+S / ↓	Aşağı
+A / ←	Sol
+D / →	Sağ
+Q	Oyundan çık
+📦 Kurulum
+Gereksinimler
+
+Python 3.7+
+
+Çalıştırma
+cd "Unicode Game Lab"
 python oyun_baslat.py
-```
 
-## 🎯 Nasıl Oynanır?
 
-### Kontroller:
-- **W** veya **↑** : Yukarı hareket
-- **S** veya **↓** : Aşağı hareket
-- **A** veya **←** : Sol hareket
-- **D** veya **→** : Sağ hareket
-- **Q** : Oyundan çık
+Windows kullanıcıları için .exe çıktısı mevcuttur.
 
-### Amaç:
-- Oyuncu (**P**) karakteri ile hareket edin
-- Hedefe (**O**) ulaşın
-- Kutuları (**🟥**, **🟧**, **🟨**, vb.) iterek yol açın
-- Su (**~**) üzerinden geçebilirsiniz
-- Dikenler (**▲**, **△**, **▷**, vb.) ve bloklar (**#**) geçilemez
+📁 Proje Yapısı
+Unicode Game Lab/
+├── karakter_anlamlari.json   # Karakter ve davranış tanımları
+├── game_lab.py               # Karakter analiz sistemi
+├── ornek_haritalar.py        # Python tabanlı haritalar
+├── ornek_haritalar.json      # JSON tabanlı haritalar
+├── oyun_motoru.py            # Ana oyun motoru
+├── oyun_baslat.py            # Başlatıcı
+└── README.md
 
-## 📁 Dosya Yapısı
+🗺️ Örnek Haritalar
 
-```
-Unicode Game lab/
-├── karakter_anlamlari.json   # Karakter anlamları veritabanı
-├── game_lab.py               # Karakter anlam sistemi
-├── ornek_haritalar.py        # Örnek haritalar (Python)
-├── ornek_haritalar.json      # Örnek haritalar (JSON)
-├── oyun_motoru.py            # Oyun motoru
-├── oyun_baslat.py            # Oyun başlatıcı
-└── README.md                 # Bu dosya
-```
+Basit Başlangıç
 
-## 🎲 Örnek Haritalar
+Labirent
 
-1. **Basit Örnek** - Başlangıç için ideal
-2. **Labirent** - Karmaşık labirent yapısı
-3. **Tuzaklar ve Zorluklar** - Dikenler ve su içeren zorlu harita
-4. **Yönlü İtilebilir Nesneler** - Yönlü hareket eden nesneler
-5. **Anahtar ve Kapı** - Anahtar toplama ve kapı açma
-6. **Karmaşık** - Enerji nesneleri ve tuzaklarla dolu
+Tuzaklı Alan
 
-## 🔧 Kendi Haritanızı Oluşturma
+Yönlü İtilebilir Nesneler
 
-```python
+Anahtar & Kapı Mekaniği
+
+Karmaşık Seviye
+
+🧠 Karakter Sistemi
+Geçilebilir
+
+→ Boş alan
+
+~ → Su
+
+O → Hedef
+
+Geçilemez
+
+# → Duvar / Blok
+
+▲ △ ▷ ▼ ◁ → Dikenler
+
+Özel
+
+P → Oyuncu
+
+🟥 🟧 🟨 🟩 🟦 → İtilebilir nesneler
+
+⬆️ ➡️ ⬇️ ⬅️ → Yönlü itilebilir nesneler
+
+K → Anahtar
+
+D → Kapı
+
+⚡ 💎 → Enerji / Özel nesneler
+
+👉 Tüm tanımlar: karakter_anlamlari.json
+
+🛠️ Kendi Haritanı Oluştur
 from oyun_motoru import OyunMotoru
 
-# Harita oluştur
-benim_haritam = [
+harita = [
     ["#", "#", "#", "#", "#"],
     ["#", "P", " ", " ", "#"],
     ["#", " ", "🟥", " ", "#"],
@@ -75,44 +128,40 @@ benim_haritam = [
     ["#", "#", "#", "#", "#"]
 ]
 
-# Oyunu başlat
-motor = OyunMotoru(benim_haritam)
+motor = OyunMotoru(harita)
 motor.oyunu_baslat()
-```
 
-## 📚 Karakter Anlamları
+🎨 Özelleştirme
 
-### Geçilebilir:
-- ` ` (Boşluk) - Boş alan
-- `~` - Su (geçilebilir ama yavaş)
-- `O` - Hedef
+Yeni karakter ekle
 
-### Geçilemez:
-- `#` - Blok/Duvar
-- `▲`, `△`, `▷`, `▼`, `◁` - Dikenler
+Var olanların davranışını değiştir
 
-### Özel:
-- `P` - Oyuncu
-- `🟥`, `🟧`, `🟨`, `🟩`, `🟦` - İtilebilir nesneler
-- `⬆️`, `➡️`, `⬇️`, `⬅️` - Yönlü itilebilir nesneler
-- `K` - Anahtar
-- `D` - Kapı
-- `⚡`, `💎` - Enerji nesneleri
+Renk / Unicode / çarpışma kurallarını ayarla
 
-Tam liste için `karakter_anlamlari.json` dosyasına bakın.
+👉 Hepsi JSON üzerinden.
 
-## 🎨 Özelleştirme
+🧪 Sürüm Bilgisi
 
-`karakter_anlamlari.json` dosyasını düzenleyerek yeni karakterler ve özellikler ekleyebilirsiniz.
+Unicode Game V0.1.1 Beta
 
-## 📝 Lisans
+Stabil çekirdek
 
-Bu proje örnek amaçlıdır. İstediğiniz gibi kullanabilir ve değiştirebilirsiniz.
+Genişletilebilir yapı
 
-## 🤝 Katkıda Bulunma
+Sprite destekli V2 planlanıyor
 
-Kendi haritalarınızı oluşturup paylaşabilirsiniz!
+📜 Lisans
 
----
+Bu proje eğitim ve deneysel amaçlıdır.
+Serbestçe kullanılabilir, geliştirilebilir.
 
-**İyi oyunlar! 🎮**
+🤝 Katkı
+
+Harita ekle
+
+Yeni mekanik öner
+
+Unicode karakter setini genişlet
+
+İyi oyunlar ve iyi kodlamalar! 🎮🚀
